@@ -21,7 +21,9 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "skipLibCheck": true,
+    "typeRoots": ["node_modules/@angular/common/http"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

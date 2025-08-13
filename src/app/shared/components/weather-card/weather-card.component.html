@@ -1,0 +1,22 @@
+
+
+
+<div class="row">
+    <div class="col-md-6 offset-md-3 mt-4 mb-md-0">
+       <mat-card *ngIf="weatherData" class="p-3">
+        <mat-card-title class="text-center">
+            <h2>{{weatherData.name}}, {{weatherData.sys.country}}</h2>
+            <img [src]="'https://openweathermap.org/img/wn/' + weatherData.weather[0].icon + '@2x.png'"
+       [alt]="weatherData.weather[0].description">
+        </mat-card-title>
+        <mat-card-subtitle class="text-center">
+             <h4>{{weatherData.main.temp}} &#8451;</h4>
+        </mat-card-subtitle>
+        <mat-card-content class="d-flex justify-content-between">
+            <p>{{weatherData.weather[0].description}}</p>
+            <p>Humidity: {{ weatherData.main.humidity }}%</p>
+            <p>Wind: {{ weatherData.wind.speed }} m/s</p>
+        </mat-card-content>
+       </mat-card>
+    </div>
+</div>
